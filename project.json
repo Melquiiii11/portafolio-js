@@ -1,0 +1,26 @@
+[
+    {
+      "img": "./img/project1.png",
+      "title": "Generator Password",
+      "description": "This project generates passwords",
+      "github": "./img/github",
+      "imgLink": "https://github.com/Melquiiii11/generator-password"
+    },
+   
+    {
+        "img": "imagen.jpg",
+        "imgLink": "https://example.com/imagen",
+        "title": "Generador de Contraseñas",
+        "description": "Este proyecto genera contraseñas seguras.",
+        "github": "https://github.com/usuario/repositorio"
+      },
+      {
+        "img": "./img/project1.png",
+        "title": "Portafolio",
+        "description": "This project is a portafolio",
+        "github": "./img/github",
+        "imgLink": "https://github.com/Melquiiii11/portafolio-js"
+      } 
+      
+  ]
+  

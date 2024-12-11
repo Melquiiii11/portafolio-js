@@ -49,7 +49,7 @@
     <div class="divproject">
         <script src="project.js"></script>
         <div class="item-project">
-            <img src="" alt="">
+            <!-- <img src="" alt="">
             <h3>TITLE</h3>
             <p>Description the programan</p>
             <a href="#" class="link"><img src="./img/github.png" alt=""></a>
@@ -75,7 +75,7 @@
             <h3>TITLE</h3>
             <p>Description the programan</p>
             <a href="#" class="link"><img src="./img/github.png" alt=""></a>
-        </div>
+        </div> -->
 
         
     </div>
@@ -124,8 +124,8 @@
         }
 
         emailjs.send("service_dbq2h97", "template_61a6ie8", {
-            user_name: name,
-            user_email: email,
+            name: name,
+            email: email,
             message: message,
         }).then(response => {
             alert("!Mensaje enviado con Exito");
@@ -136,6 +136,8 @@
         });
     });
 </script>
+<h1>Prueba de commit y cambio de rama de git</h1>
 </body>
+
 <script src="./app.js"></script>
 </html>
