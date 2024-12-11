@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAFOLIO</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+   
+<header>
+    <nav class="main-nav">
+        <div class="btn-menu">
+           
+        </div>
+        <ul class="menu">
+            <li class="menu-item profile">
+                <img src="/img/avatar.jpg" alt="Avatar" class="img-menu">
+                <ul class="dropdown">
+                    <li><a href="https://www.linkedin.com/in/tecangeldiaz/" class="nav"><img src="img/linkedin.png" alt="LinkedIn"></a></li>
+                    <li><a href="https://github.com/Melquiiii11?tab=repositories" class="nav"><img src="img/github.png" alt="GitHub"></a></li>
+                    <li><a href="https://www.instagram.com/im_angeldiaz/" class="nav"><img src="img/instagram.png" alt="Instagram"></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+    
+    
+
+    <section class="about-me">
+        <!--<h1>PORTAFOLIO</h1>!-->
+        <div class="imag">
+            <img src="img/avatar.jpg" alt="" class="img-about">
+            </div>
+            
+            <div class="about">
+            <h2>About me</h2>
+            <p>
+                ¡Hola! Soy Angel Diaz, un Programador y Pentester Junior apasionado por construir soluciones tecnológicas y explorar la seguridad cibernética. Mi objetivo es crecer como profesional mientras aplico mis habilidades para resolver problemas y proteger sistemas.
+            </p>
+        </div>
+    </section>
+
+    <section class="project">
+        <h1>PROJECT</h1>
+
+
+    <div class="divproject">
+        <script src="project.js"></script>
+        <div class="item-project">
+            <img src="" alt="">
+            <h3>TITLE</h3>
+            <p>Description the programan</p>
+            <a href="#" class="link"><img src="./img/github.png" alt=""></a>
+            
+        </div>
+
+        <div class="item-project">
+            <img src="" alt="">
+            <h3>TITLE</h3>
+            <p>Description the programan</p>
+            <a href="#" class="link"><img src="./img/github.png" alt=""></a>
+        </div>
+
+        <div class="item-project">
+            <img src="" alt="">
+            <h3>TITLE</h3>
+            <p>Description the programan</p>
+            <a href="#" class="link"><img src="./img/github.png" alt=""></a>
+        </div>
+
+        <div class="item-project">
+            <img src="" alt="">
+            <h3>TITLE</h3>
+            <p>Description the programan</p>
+            <a href="#" class="link"><img src="./img/github.png" alt=""></a>
+        </div>
+
+        
+    </div>
+    </section>
+
+<footer>
+    <div id="divFormulario">
+        <form action="#">
+            <h3>Contact Me</h3>
+            <input type="text" placeholder="Name..">
+            <input type="email" placeholder="Gmail..">
+            <textarea name="textareaFooter" placeholder="Write your messager" style="height: 150px;"></textarea>
+            <button type="submit" id="btnEnviar">Enviar</button>
+        </form>
+    </div>
+</footer>
+
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "rE4kIcxOGp2Tw3oo_",
+      });
+   })();
+</script>
+
+
+
+<script>
+   // emailjs.init("USER ID AUQI VA...");
+
+    document.getElementById("btnEnviar").addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const name = document.querySelector('input[placeholder="Name.."]').value;
+        const email = document.querySelector('input[placeholder="Gmail.."]').value;
+        const message = document.querySelector('textarea[name="textareaFooter"]').value;
+
+
+        if(!name || !email || !message) {
+            alert("por favor, completa todos los campos.");
+            return;
+        }
+
+        emailjs.send("service_dbq2h97", "template_61a6ie8", {
+            user_name: name,
+            user_email: email,
+            message: message,
+        }).then(response => {
+            alert("!Mensaje enviado con Exito");
+            console.log("sucess!", response.status, response.text);
+        }).catch(err => {
+            alert("Ocurrio un error al enviar el mensaje.");
+            console.error("Faile...", err);
+        });
+    });
+</script>
+</body>
+<script src="./app.js"></script>
+</html>
